@@ -16,7 +16,7 @@ if not api_key:
     st.info("Che, poné la API Key en la barra lateral o configurá los Secrets si no esto no arranca.")
 else:
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('models/gemini-1.5-flash')
 
     # Instrucciones estrictas de personalidad
     system_instruction = (
