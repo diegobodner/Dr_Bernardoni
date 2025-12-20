@@ -16,7 +16,18 @@ if not api_key:
     st.info("Che, poné la API Key en la barra lateral o configurá los Secrets si no esto no arranca.")
 else:
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel(model_name='models/gemini-1.5-flash')
+    
+    # --- BLOQUE DE DIAGNÓSTICO ---
+    st.write("### 🔍 Modelos disponibles para tu cuenta:")
+    try:
+        models = [m.name for m in genai.list_models() if 'generateContent' in m.supported_generation_methods]
+        st.write(models)
+    except Exception as e:
+        st.error(f"Ni siquiera puedo listar los modelos: {e}")
+    # -----------------------------
+
+    # Intentá forzar el modelo con la ruta que suele funcionar en v1beta
+    model = genai.GenerativeModel('gemini-1.5-flash-latest')
 
     # Instrucciones estrictas de personalidad
     system_instruction = (
