@@ -17,8 +17,8 @@ if not api_key:
 else:
     genai.configure(api_key=api_key)
     
-   # Intentá forzar el modelo con la ruta que suele funcionar en v1beta
-    model = genai.GenerativeModel('gemini-2.0-flash')
+    # Intentá forzar el modelo con la ruta que suele funcionar en v1beta
+    model = genai.GenerativeModel('gemini-flash-latest')
 
     # Instrucciones estrictas de personalidad
     system_instruction = (
