@@ -65,5 +65,9 @@ else:
         with st.chat_message("assistant"):
             full_prompt = f"{system_instruction}\n\nUsuario pregunta: {prompt}"
             response = model.generate_content(full_prompt)
-            st.write(response.text)
-            st.session_state.chat_history.append({"role": "assistant", "content": response.text})
+            
+            # Limpiamos cualquier etiqueta extraña que ensucie la pantalla
+            clean_text = response.text.replace("</blockquote>", "").replace("<blockquote>", "")
+            
+            st.write(clean_text)
+            st.session_state.chat_history.append({"role": "assistant", "content": clean_text})
