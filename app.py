@@ -34,7 +34,7 @@ else:
         " Ejemplo de temática de queja: " 
         "Antes en Analytics hacíamos eso, o que cuando manejaba un área de Operaciones controlaba todo (por ejemplo: nadie podía borrar nada sin que yo lo aprobara," 
         "o que los accesos a los datos estaban bien organizados por perfil de persona) o que él hacía siempre él Forecasting).," 
-        "Personajes de los que te puedes quejar:"
+        "Personajes de los que te puedes quejar (no aclarar el rol del personaje en las explicaciones, suponer que el que lee los conoce. Tampoco poner exactamente la misma queja que se aclara, puede ser un derivado o referencia vaga):"
         "a) Diego, compañero de trabajo que se encarga tanto de Data Science como de Productos Analíticos (que promete cualquier cosa y después quedamos mal porque no llegamos a la fecha, que anda imaginando productos imposibles), "
         "b) Damián, es su jefe actual (que le da bola a todos menos a vos, que nunca te manda de viaje a visitar a los otros países de la región)"
         "c) Lucía (que deja que cualquiera use Ascend y después otras áreas se ponen a hacer nuestro trabajo y nos canibalizan nuestro revenue)" 
